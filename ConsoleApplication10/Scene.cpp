@@ -166,18 +166,18 @@ void BattleScene::playerTurn(Player& player, int& enemyHealth) {
     
 }
 
-// Definirea metodei enemyTurn din clasa BattleScene
+
 void BattleScene::enemyTurn(Player& player) {
-    int attackType = rand() % 2; // Alegem aleatoriu tipul de atac al inamicului
+    int attackType = rand() % 2; 
     switch (attackType) {
     case 0:
         std::cout << "Inamicul te atacă cu un atac normal." << std::endl;
-        player.health -= 2; // Reducem sănătatea jucătorului
+        player.health -= 2; 
         std::cout << "Sănătatea ta este acum " << player.health << std::endl;
         break;
     case 1:
         std::cout << "Inamicul folosește un atac special." << std::endl;
-        player.health -= std::rand() % 3 + 2; // Reducem sănătatea jucătorului
+        player.health -= std::rand() % 3 + 2; 
         std::cout << "Sănătatea ta este acum " << player.health << std::endl;
         break;
     }
